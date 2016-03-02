@@ -221,6 +221,20 @@
 			remoteGlobalIDString = 4CF626EE1BA7CB3E0011A099;
 			remoteInfo = "Alamofire tvOS";
 		};
+		7A38220A1C86AFF0005BBFF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A3822051C86AFF0005BBFF1 /* IBAnimatableApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE6C66FF1BFBF93500134A35;
+			remoteInfo = IBAnimatableApp;
+		};
+		7A38220C1C86AFF0005BBFF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A3822051C86AFF0005BBFF1 /* IBAnimatableApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE6B01551C2A082300950BB2;
+			remoteInfo = IBAnimatable;
+		};
 		F8111E6519A967880040E7D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8111E2A19A95C8B0040E7D1 /* Project object */;
@@ -286,6 +300,7 @@
 		4CF626F81BA7CB3E0011A099 /* Alamofire tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alamofire tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD67C0B1A5C55C900ED2280 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72998D721BF26173006D3F69 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		7A3822051C86AFF0005BBFF1 /* IBAnimatableApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IBAnimatableApp.xcodeproj; path = "../IBAnimatable-master/IBAnimatableApp.xcodeproj"; sourceTree = "<group>"; };
 		B39E2F831C1A72F8002DA1A9 /* certDER.cer */ = {isa = PBXFileReference; lastKnownFileType = file; name = certDER.cer; path = selfSignedAndMalformedCerts/certDER.cer; sourceTree = "<group>"; };
 		B39E2F841C1A72F8002DA1A9 /* certDER.crt */ = {isa = PBXFileReference; lastKnownFileType = file; name = certDER.crt; path = selfSignedAndMalformedCerts/certDER.crt; sourceTree = "<group>"; };
 		B39E2F851C1A72F8002DA1A9 /* certDER.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = certDER.der; path = selfSignedAndMalformedCerts/certDER.der; sourceTree = "<group>"; };
@@ -536,6 +551,15 @@
 			name = Features;
 			sourceTree = "<group>";
 		};
+		7A3822061C86AFF0005BBFF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A38220B1C86AFF0005BBFF1 /* IBAnimatableApp.app */,
+				7A38220D1C86AFF0005BBFF1 /* IBAnimatable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B39E2F821C1A72E5002DA1A9 /* Varying Encoding Types and Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +577,7 @@
 		F8111E2919A95C8B0040E7D1 = {
 			isa = PBXGroup;
 			children = (
+				7A3822051C86AFF0005BBFF1 /* IBAnimatableApp.xcodeproj */,
 				F8111E3519A95C8B0040E7D1 /* Source */,
 				F8111E3F19A95C8B0040E7D1 /* Tests */,
 				F8111E3419A95C8B0040E7D1 /* Products */,
@@ -820,6 +845,12 @@
 			mainGroup = F8111E2919A95C8B0040E7D1;
 			productRefGroup = F8111E3419A95C8B0040E7D1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7A3822061C86AFF0005BBFF1 /* Products */;
+					ProjectRef = 7A3822051C86AFF0005BBFF1 /* IBAnimatableApp.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F8111E3219A95C8B0040E7D1 /* Alamofire iOS */,
@@ -832,6 +863,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7A38220B1C86AFF0005BBFF1 /* IBAnimatableApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = IBAnimatableApp.app;
+			remoteRef = 7A38220A1C86AFF0005BBFF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7A38220D1C86AFF0005BBFF1 /* IBAnimatable.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = IBAnimatable.framework;
+			remoteRef = 7A38220C1C86AFF0005BBFF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4CF626ED1BA7CB3E0011A099 /* Resources */ = {

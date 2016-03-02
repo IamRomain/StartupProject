@@ -32,6 +32,8 @@ class ProfileViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        returnUserData()
 
         //Check if the Sidebar is active
         if revealViewController() != nil {
@@ -47,23 +49,6 @@ class ProfileViewController: UITableViewController {
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //Hide the navigation bar if the Sidebar is on
-        navigationController?.hidesBarsOnSwipe = false
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        
-        //This permits to unselect the previously selected cell when going back to table view
-        let indexPath = self.tableView.indexPathForSelectedRow
-        if (indexPath != nil) {
-            self.tableView.deselectRowAtIndexPath(indexPath!, animated: animated)
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 
     //Return the Data
     func returnUserData() {
@@ -110,7 +95,6 @@ class ProfileViewController: UITableViewController {
         }
         task.resume()
     }
-    
     
     
     
