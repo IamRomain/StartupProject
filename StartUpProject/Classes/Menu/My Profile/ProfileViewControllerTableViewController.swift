@@ -67,8 +67,8 @@ class ProfileViewController: UITableViewController {
             self.birthday = (result.valueForKey("birthday") as? String)!
         
             self.nameLabel.text = self.username
-            self.emailLabel.text = self.userEmail
-            self.idLabel.text = self.facebookid
+            //self.emailLabel.text = self.userEmail
+            //self.idLabel.text = self.facebookid
             self.genderLabel.text = self.gender
             self.ageLabel.text = self.birthday
         
