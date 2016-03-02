@@ -27,6 +27,7 @@
 		7A3EA13A1C865E23003EFA11 /* ProfileViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3EA1391C865E23003EFA11 /* ProfileViewControllerTableViewController.swift */; };
 		7A9266C51C869CE5000CDBFD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9266B81C869CDD000CDBFD /* Alamofire.framework */; };
 		7A9266C61C869CE5000CDBFD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9266B81C869CDD000CDBFD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A9266CB1C86A653000CDBFD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9266CA1C86A653000CDBFD /* Settings.swift */; };
 		7AEA93021C8635000004C7E6 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA93011C8635000004C7E6 /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,7 @@
 		2613EC571C8614EA000228A4 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = News.swift; path = "Classes/Menu/News/News Choice/News.swift"; sourceTree = "<group>"; };
 		7A3EA1391C865E23003EFA11 /* ProfileViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewControllerTableViewController.swift; path = "Classes/Menu/My Profile/ProfileViewControllerTableViewController.swift"; sourceTree = "<group>"; };
 		7A9266AD1C869CDD000CDBFD /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		7A9266CA1C86A653000CDBFD /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = Classes/Menu/Settings/Settings.swift; sourceTree = "<group>"; };
 		7AEA93011C8635000004C7E6 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = "Classes/Menu/News/News Choice/NewsTableViewCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,6 +280,7 @@
 				7A3EA1381C8656E5003EFA11 /* My Profile */,
 				2613EC4F1C860CB0000228A4 /* MenuController.swift */,
 				2613EC511C860F92000228A4 /* News */,
+				7A9266C91C86A5E9000CDBFD /* Settings */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -320,6 +323,14 @@
 				7A9266C41C869CDD000CDBFD /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7A9266C91C86A5E9000CDBFD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7A9266CA1C86A653000CDBFD /* Settings.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +533,7 @@
 				2613EC531C860FDA000228A4 /* NewsTableViewController.swift in Sources */,
 				2613EB941C854788000228A4 /* AppDelegate.swift in Sources */,
 				7A3EA13A1C865E23003EFA11 /* ProfileViewControllerTableViewController.swift in Sources */,
+				7A9266CB1C86A653000CDBFD /* Settings.swift in Sources */,
 				7AEA93021C8635000004C7E6 /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
