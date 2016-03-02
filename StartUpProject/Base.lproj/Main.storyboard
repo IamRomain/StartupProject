@@ -405,6 +405,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="pRc-Eh-mO5" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="aK7-Fw-qha"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -418,6 +421,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgN-hB-D5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1306" y="591"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="fd8-NU-2Pv">
+            <objects>
+                <viewController id="tOd-zF-Dsd" customClass="Settings" customModule="StartUpProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kAd-tQ-tnI"/>
+                        <viewControllerLayoutGuide type="bottom" id="DcW-4u-qaf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TVJ-J8-9Vv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7M-9v-XGA">
+                                <rect key="frame" x="281" y="285" width="39" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetData:" destination="tOd-zF-Dsd" eventType="touchUpInside" id="Ybo-IV-UTu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f7M-9v-XGA" firstAttribute="centerY" secondItem="TVJ-J8-9Vv" secondAttribute="centerY" id="lyL-gI-QnR"/>
+                            <constraint firstItem="f7M-9v-XGA" firstAttribute="centerX" secondItem="TVJ-J8-9Vv" secondAttribute="centerX" id="sWO-a5-FbP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="yTs-R5-gLp">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="abd-TG-4w6">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="abd-TG-4w6" id="w9r-Rr-EoZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EzY-54-e4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="233" y="1559"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eOg-PY-78g">
@@ -733,6 +777,24 @@
             </objects>
             <point key="canvasLocation" x="-579" y="-1558"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MYc-WU-7Ed">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pRc-Eh-mO5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MNi-jg-pii">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tOd-zF-Dsd" kind="relationship" relationship="rootViewController" id="oy9-pi-Cdo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nm7-tB-upZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-579" y="1559"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BGTuto1" width="1242" height="2208"/>
@@ -748,6 +810,6 @@
         <image name="settings" width="57" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yij-Nt-JwM"/>
+        <segue reference="vU1-mo-YQA"/>
     </inferredMetricsTieBreakers>
 </document>

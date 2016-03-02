@@ -42,22 +42,22 @@ class Settings: UIViewController {
     //Func to reset the Walkthrough
     func resetDisplayWalkthroughs() {
     
-    // Force to reset the walkthroughs
-    _ = NSUserDefaults.standardUserDefaults()
-    let displayedWalkthrough = false
+        // Force to reset the walkthroughs
+        _ = NSUserDefaults.standardUserDefaults()
+        let displayedWalkthrough = false
+        
+        //Reset the Key
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setBool(false, forKey: "DisplayedWalkthrough")
     
-    let userDefaults = NSUserDefaults.standardUserDefaults()
-    userDefaults.setBool(false, forKey: "DisplayedWalkthrough")
-    
-    // let's show them
-    if !displayedWalkthrough {
-    // instantiate neew PageVC via storyboard
-    if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as? PageViewController {
-    self.presentViewController(pageViewController, animated: true, completion: nil)
+        // let's show them
+        if !displayedWalkthrough {
+            // instantiate neew PageVC via storyboard
+            if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("WalkthroughPageViewController") as? WalkthroughPageViewController {
+                self.presentViewController(pageViewController, animated: true, completion: nil)
+            }
+        }
     }
-    }
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
