@@ -374,8 +374,8 @@
 			isa = PBXGroup;
 			children = (
 				2613EC4F1C860CB0000228A4 /* MenuController.swift */,
-				7A3EA1381C8656E5003EFA11 /* My Profile */,
 				2613EC511C860F92000228A4 /* News */,
+				7A3EA1381C8656E5003EFA11 /* My Profile */,
 				7A3822E31C8A8040005BBFF1 /* School List */,
 				7A9266C91C86A5E9000CDBFD /* Settings */,
 			);
