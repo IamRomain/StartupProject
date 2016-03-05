@@ -14,8 +14,12 @@ import Alamofire
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    //Initialize the news data infos
     internal var newsInfos = [News]()
+    //Initialize the loadData object assigned to the LoadData class
+    let loadData = (UIApplication.sharedApplication().delegate as! LoadData)
 
+    
     var window: UIWindow?
         
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -33,6 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return .LightContent
             }
             
+            //Call the class LoadData to load everything before the launch of the app
+            loadData
+            
             //Set the font and size
             if let barFont = UIFont(name: "Avenir-Light", size: 24.0) {
                 UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor(), NSFontAttributeName:barFont]
@@ -43,19 +50,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         }
 
-    /*
-    func getData(completion:(Bool)->()) {
-        Alamofire.request(.GET, "http://kuzco.fr/api/ecoles.php", parameters: ["adresse": "location", "categorie": "categorie", "eleves": "eleves", "logo": "logo", "nom": "name"]).responseJSON { response in
-        
-        let jsonArray = JSON(data:response.data!)
-        
-        for (_, schoolData) in jsonArray {
-        let school = Schools(name: schoolData["nom"].stringValue, type: schoolData["categorie"].stringValue, location: schoolData["adresse"].stringValue, numberOfMembers: schoolData["eleves"].stringValue, image: schoolData["logo"].stringValue)
-        self.schoolInfos.append(school)
-        }
-        completion(true)
-        }
-    }*/
   
         func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
         {
