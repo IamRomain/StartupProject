@@ -31,6 +31,8 @@
 		7A3822DA1C8A715B005BBFF1 /* IBAnimatable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3822BC1C8A714A005BBFF1 /* IBAnimatable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A3822DD1C8A715B005BBFF1 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3822C81C8A7150005BBFF1 /* SwiftyJSON.framework */; };
 		7A3822DE1C8A715B005BBFF1 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3822C81C8A7150005BBFF1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A3822E61C8A80BD005BBFF1 /* SchoolListChoiceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3822E51C8A80BD005BBFF1 /* SchoolListChoiceTVC.swift */; };
+		7A3822E81C8A813D005BBFF1 /* SchoolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3822E71C8A813D005BBFF1 /* SchoolData.swift */; };
 		7A3EA13A1C865E23003EFA11 /* ProfileViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3EA1391C865E23003EFA11 /* ProfileViewControllerTableViewController.swift */; };
 		7A9266CB1C86A653000CDBFD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9266CA1C86A653000CDBFD /* Settings.swift */; };
 		7AEA93021C8635000004C7E6 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA93011C8635000004C7E6 /* NewsTableViewCell.swift */; };
@@ -232,6 +234,8 @@
 		7A38229C1C8A7142005BBFF1 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Frameworks/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		7A3822B41C8A714A005BBFF1 /* IBAnimatableApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IBAnimatableApp.xcodeproj; path = Frameworks/IBAnimatable/IBAnimatableApp.xcodeproj; sourceTree = "<group>"; };
 		7A3822BD1C8A7150005BBFF1 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = Frameworks/SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
+		7A3822E51C8A80BD005BBFF1 /* SchoolListChoiceTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SchoolListChoiceTVC.swift; path = "Classes/Menu/School List/School List Choice/SchoolListChoiceTVC.swift"; sourceTree = "<group>"; };
+		7A3822E71C8A813D005BBFF1 /* SchoolData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SchoolData.swift; path = "Classes/Menu/School List/School List Choice/SchoolData.swift"; sourceTree = "<group>"; };
 		7A3EA1391C865E23003EFA11 /* ProfileViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewControllerTableViewController.swift; path = "Classes/Menu/My Profile/ProfileViewControllerTableViewController.swift"; sourceTree = "<group>"; };
 		7A9266CA1C86A653000CDBFD /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = Classes/Menu/Settings/Settings.swift; sourceTree = "<group>"; };
 		7AEA93011C8635000004C7E6 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = "Classes/Menu/News/News Choice/NewsTableViewCell.swift"; sourceTree = "<group>"; };
@@ -372,6 +376,7 @@
 				2613EC4F1C860CB0000228A4 /* MenuController.swift */,
 				7A3EA1381C8656E5003EFA11 /* My Profile */,
 				2613EC511C860F92000228A4 /* News */,
+				7A3822E31C8A8040005BBFF1 /* School List */,
 				7A9266C91C86A5E9000CDBFD /* Settings */,
 			);
 			name = Menu;
@@ -430,6 +435,23 @@
 				7A3822D41C8A7150005BBFF1 /* SwiftyJSON tvOS Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7A3822E31C8A8040005BBFF1 /* School List */ = {
+			isa = PBXGroup;
+			children = (
+				7A3822E41C8A8050005BBFF1 /* School List Choice */,
+			);
+			name = "School List";
+			sourceTree = "<group>";
+		};
+		7A3822E41C8A8050005BBFF1 /* School List Choice */ = {
+			isa = PBXGroup;
+			children = (
+				7A3822E51C8A80BD005BBFF1 /* SchoolListChoiceTVC.swift */,
+				7A3822E71C8A813D005BBFF1 /* SchoolData.swift */,
+			);
+			name = "School List Choice";
 			sourceTree = "<group>";
 		};
 		7A3EA1381C8656E5003EFA11 /* My Profile */ = {
@@ -717,9 +739,11 @@
 				2613EC581C8614EA000228A4 /* News.swift in Sources */,
 				2613EC4D1C860637000228A4 /* SWRevealViewController.m in Sources */,
 				2613EB961C854788000228A4 /* ViewController.swift in Sources */,
+				7A3822E61C8A80BD005BBFF1 /* SchoolListChoiceTVC.swift in Sources */,
 				2613EC501C860CB0000228A4 /* MenuController.swift in Sources */,
 				2613EC531C860FDA000228A4 /* NewsTableViewController.swift in Sources */,
 				2613EB941C854788000228A4 /* AppDelegate.swift in Sources */,
+				7A3822E81C8A813D005BBFF1 /* SchoolData.swift in Sources */,
 				7A3EA13A1C865E23003EFA11 /* ProfileViewControllerTableViewController.swift in Sources */,
 				7A9266CB1C86A653000CDBFD /* Settings.swift in Sources */,
 				7AEA93021C8635000004C7E6 /* NewsTableViewCell.swift in Sources */,

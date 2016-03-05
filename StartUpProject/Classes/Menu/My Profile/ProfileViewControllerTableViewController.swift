@@ -48,7 +48,6 @@ class ProfileViewController: UITableViewController {
             title = "Profile Page"
         }
     }
-    
 
     //Return the Data
     func returnUserData() {

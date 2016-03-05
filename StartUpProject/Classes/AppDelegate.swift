@@ -10,14 +10,15 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Alamofire
-//Just a Test
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     //Initialize the news data infos
     internal var newsInfos = [News]()
+    internal var schoolInfos = [SchoolData]()
     //Initialize the loadData object assigned to the LoadData class
-    let loadData = (UIApplication.sharedApplication().delegate as! LoadData)
+    internal var loadData = LoadData()
 
     
     var window: UIWindow?
@@ -38,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             //Call the class LoadData to load everything before the launch of the app
-            loadData
+            loadData.justATry()
             
             //Set the font and size
             if let barFont = UIFont(name: "Avenir-Light", size: 24.0) {
