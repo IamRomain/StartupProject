@@ -1,5 +1,5 @@
 //
-//  NewsTableViewController.swift
+//  NewsChoiceTVC.swift
 //  StartUpProject
 //
 //  Created by Romain Soubrane on 01/03/2016.
@@ -10,7 +10,7 @@ import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 
-class NewsTableViewController: UITableViewController {
+class NewsChoiceTVC: UITableViewController {
 
     var newsInfos = [News]()
     
@@ -71,7 +71,7 @@ class NewsTableViewController: UITableViewController {
     
     //Display the data in the cells
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! NewsTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! NewsChoiceTVCell
         
         //Configure the cell
         cell.newsNameLabel.text = self.newsInfos[indexPath.row].title

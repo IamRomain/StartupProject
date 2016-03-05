@@ -1,5 +1,5 @@
 //
-//  NewsTableViewCell.swift
+//  NewsChoiceTVCell.Swift
 //  StartUpProject
 //
 //  Created by Romain on 01/03/2016.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class NewsTableViewCell: UITableViewCell {
+class NewsChoiceTVCell: UITableViewCell {
 
-    //Initialize the Labels
+    //Initialize the outlets from the Storyboard
     @IBOutlet weak var newsNameLabel: UILabel!
     @IBOutlet weak var newsTypeLabel: UILabel!
     @IBOutlet weak var newsAuthorLabel: UILabel!

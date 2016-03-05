@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Alamofire
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,7 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
             // Override point for customization after application launch.
             
-            //self.getData(){ _ in }
+            loadData.getSchoolListData(){ _ in }
+            self.getData(){ _ in }
+
+            
             
             //Set the app colors
             window!.tintColor = UIColor(red: 252/255, green: 72/255, blue: 49/255, alpha: 1)
@@ -39,7 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             //Call the class LoadData to load everything before the launch of the app
-            loadData.justATry()
             
             //Set the font and size
             if let barFont = UIFont(name: "Avenir-Light", size: 24.0) {
@@ -52,6 +55,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
   
+    
+    
+    func getData(completion:(Bool)->()) {
+        Alamofire.request(.GET, "http://kuzco.fr/api/ecoles.php", parameters: ["adresse": "location", "categorie": "categorie", "eleves": "eleves", "logo": "logo", "nom": "name"]).responseJSON { response in
+            
+            let jsonArray = JSON(data:response.data!)
+            
+            for (_, schoolData) in jsonArray {
+                let school = SchoolData(name: schoolData["nom"].stringValue, type: schoolData["categorie"].stringValue, location: schoolData["adresse"].stringValue, numberOfMembers: schoolData["eleves"].stringValue, image: schoolData["logo"].stringValue)
+                self.schoolInfos.append(school)
+            }
+            completion(true)
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
         func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
         {
             return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
