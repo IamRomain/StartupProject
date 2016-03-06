@@ -12,9 +12,13 @@ import SwiftyJSON
 
 public class LoadData: NSObject {
     
-    internal var schoolInfos = [SchoolData]()
+    var schoolInfos = [SchoolData]()
     
-//This is the function to get the School List Data
+    func loadEverything() {
+        self.getSchoolListData(){ _ in }
+    }
+    
+    //This is the function to get the School List Data
     func getSchoolListData(completion:(Bool)->()) {
         Alamofire.request(.GET, "http://kuzco.fr/api/ecoles.php", parameters: ["adresse": "location", "categorie": "categorie", "eleves": "eleves", "logo": "logo", "nom": "name"]).responseJSON { response in
             

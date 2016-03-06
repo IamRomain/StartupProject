@@ -78,6 +78,8 @@ class ProfileViewController: UITableViewController {
     
     //Function that will load the Profile Image
     func load_image(urlString:String, imageLabel: UIImageView) {
+        profilePictureFrame()
+        
         let imgURL: NSURL = NSURL(string: urlString)!
         let request: NSURLRequest = NSURLRequest(URL: imgURL)
     
@@ -95,7 +97,15 @@ class ProfileViewController: UITableViewController {
         task.resume()
     }
     
-    
+    //Set the profile picture frame
+    func profilePictureFrame() {
+        self.profilePicture.layer.borderWidth = 1
+        self.profilePicture.layer.masksToBounds = false
+        self.profilePicture.layer.borderColor = UIColor.blackColor().CGColor
+        self.profilePicture.layer.cornerRadius = self.profilePicture.frame.height/2
+        self.profilePicture.clipsToBounds = true
+    }
+
     
     // MARK: - Table view data source
 

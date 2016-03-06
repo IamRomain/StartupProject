@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     internal var newsInfos = [News]()
     internal var schoolInfos = [SchoolData]()
     //Initialize the loadData object assigned to the LoadData class
-    internal var loadData = LoadData()
+//    internal var loadData = LoadData()
 
     
     var window: UIWindow?
@@ -27,10 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
             // Override point for customization after application launch.
             
-            loadData.getSchoolListData(){ _ in }
-            self.getData(){ _ in }
+ //           loadData.loadEverything()
+            self.getData() { _ in }
 
-            
             
             //Set the app colors
             window!.tintColor = UIColor(red: 252/255, green: 72/255, blue: 49/255, alpha: 1)
@@ -52,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //Needed to initialize FB Button
             FBSDKLoginButton.classForCoder()
             return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        }
+    }
 
   
     
@@ -71,14 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    
-    
-    
-    
-    
-    
-        func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
-        {
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
             return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
         }
     
