@@ -22,7 +22,6 @@ class ProfileViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //This allows us to get the schoolInfos Data that is in LoadData class!
-        self.profileInfos = loadData.profileInfos
         
         dispProfileInfos()
         
@@ -55,14 +54,11 @@ class ProfileViewController: UITableViewController {
     
     
     func dispProfileInfos() {
-        print(profileInfos)
-        /*
-        profileTV.nameLabel.text = profileInfos.
-        profileTV.emailLabel.text =
-        profileTV.idLabel.text = self.profileInfos.facebookid
-        profileTV.genderLabel.text =
-        profileTV.ageLabel.text =
-*/
+        self.profileInfos = loadData.profileInfos
+
+
+        
+
     }
     
 }

@@ -49,13 +49,20 @@ public class LoadData: NSObject {
                     // Process error
                     print("Error: \(error)")
                 } else {
-                    let profile = ProfileData(facebookid: (result.valueForKey("id"))!.stringValue, username: (result.valueForKey("name"))!.stringValue, userEmail: (result.valueForKey("email"))!.stringValue, gender: (result.valueForKey("gender"))!.stringValue, birthday: (result.valueForKey("birthday"))!.stringValue)
-                    print(profile)
+                    let profile = ProfileData(facebookid: (result.valueForKey("id") as! String), username: (result.valueForKey("name") as! String), userEmail: (result.valueForKey("email") as! String), gender: (result.valueForKey("gender") as! String), birthday: (result.valueForKey("birthday") as! String))
                     self.profileInfos.append(profile)
-                    print(self.profileInfos)
+
+                    print(self.profileInfos[0].gender)
+                    
+                    (self.profileTV.nameLabel.text)! = (self.profileInfos[0].username)
+                    self.profileTV.emailLabel.text! = self.profileInfos[0].userEmail
+                    self.profileTV.idLabel.text! = self.profileInfos[0].facebookid
+                    self.profileTV.genderLabel.text! = self.profileInfos[0].gender
+                    self.profileTV.ageLabel.text! = self.profileInfos[0].birthday
 
                     
-        //            self.load_image("https://graph.facebook.com/\((result.valueForKey("id") as! String))/picture?type=large", imageLabel: self.profileTV.profilePicture)
+                    
+               //     self.load_image("https://graph.facebook.com/\((result.valueForKey("id") as! String))/picture?type=large", imageLabel: self.profileTV.profilePicture)
                     
                     
                 }
