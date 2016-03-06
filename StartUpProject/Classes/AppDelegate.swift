@@ -19,17 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     internal var newsInfos = [News]()
     internal var schoolInfos = [SchoolData]()
     //Initialize the loadData object assigned to the LoadData class
-//    internal var loadData = LoadData()
-
+    internal var loadData = LoadData()
     
     var window: UIWindow?
         
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
             // Override point for customization after application launch.
             
- //           loadData.loadEverything()
-            self.getData() { _ in }
-
+            //This allows to launch the function in LoadData Class, that will get all the data
+            loadData.loadEverything()
             
             //Set the app colors
             window!.tintColor = UIColor(red: 252/255, green: 72/255, blue: 49/255, alpha: 1)
@@ -53,23 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
-  
-    
-    
-    func getData(completion:(Bool)->()) {
-        Alamofire.request(.GET, "http://kuzco.fr/api/ecoles.php", parameters: ["adresse": "location", "categorie": "categorie", "eleves": "eleves", "logo": "logo", "nom": "name"]).responseJSON { response in
-            
-            let jsonArray = JSON(data:response.data!)
-            
-            for (_, schoolData) in jsonArray {
-                let school = SchoolData(name: schoolData["nom"].stringValue, type: schoolData["categorie"].stringValue, location: schoolData["adresse"].stringValue, numberOfMembers: schoolData["eleves"].stringValue, image: schoolData["logo"].stringValue)
-                self.schoolInfos.append(school)
-            }
-            completion(true)
-        }
-    }
-    
-    
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
             return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
         }

@@ -12,7 +12,9 @@ class SchoolListChoiceTVC: UITableViewController {
     
     //Set the schoolInfos var to SchoolData class
     var schoolInfos = [SchoolData]()
-  //  var loadData = LoadData()
+
+    let loadData = (UIApplication.sharedApplication().delegate as! AppDelegate).loadData as LoadData
+
 
     @IBOutlet var menuButton:UIBarButtonItem!
     
@@ -20,8 +22,7 @@ class SchoolListChoiceTVC: UITableViewController {
         super.viewDidLoad()
         
         //This allows us to get the schoolInfos Data that is in LoadData class!
-        self.schoolInfos = (UIApplication.sharedApplication().delegate as! AppDelegate).schoolInfos
-    //    self.schoolInfos = loadData.schoolInfos
+        self.schoolInfos = loadData.schoolInfos
         
         //Check if the Sidebar is active
         if revealViewController() != nil {
