@@ -9,11 +9,16 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 public class LoadData: NSObject {
     
     var schoolInfos = [SchoolData]()
+    var profileInfos = [ProfileData]()
+    var profileTV = ProfileTV()
     
+    //Function to load all the Data
     func loadEverything() {
         self.getSchoolListData(){ _ in }
     }
@@ -32,4 +37,50 @@ public class LoadData: NSObject {
         }
     }
     
+
+    //This is the function to get the Profile Data
+    func getProfileData() {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if userDefaults.boolForKey("DisplayedWalkthrough") {
+            let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath:  "me", parameters: ["fields":"email, name, gender, birthday"])
+            graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+                
+                if ((error) != nil) {
+                    // Process error
+                    print("Error: \(error)")
+                } else {
+                    let profile = ProfileData(facebookid: (result.valueForKey("id"))!.stringValue, username: (result.valueForKey("name"))!.stringValue, userEmail: (result.valueForKey("email"))!.stringValue, gender: (result.valueForKey("gender"))!.stringValue, birthday: (result.valueForKey("birthday"))!.stringValue)
+                    print(profile)
+                    self.profileInfos.append(profile)
+                    print(self.profileInfos)
+
+                    
+        //            self.load_image("https://graph.facebook.com/\((result.valueForKey("id") as! String))/picture?type=large", imageLabel: self.profileTV.profilePicture)
+                    
+                    
+                }
+            })
+        }
+    }
+    
+
+
+//Function that will load the Profile Image
+func load_image(urlString:String, imageLabel: UIImageView) {
+    let imgURL: NSURL = NSURL(string: urlString)!
+    let request: NSURLRequest = NSURLRequest(URL: imgURL)
+    
+    let session = NSURLSession.sharedSession()
+    let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+        if (error == nil && data != nil) {
+            func display_image() {
+                imageLabel.image = UIImage(data: data!)
+            }
+            dispatch_async(dispatch_get_main_queue(), display_image)
+        }
+    }
+    task.resume()
+    }
+    
 }
+

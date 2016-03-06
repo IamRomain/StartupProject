@@ -21,6 +21,8 @@ class WalkthroughViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var loginButton: FBSDKLoginButton!
     
+    var loadData = LoadData()
+    
     //Set the Data Model for each walkthrough screen
     var index = 0
     var headerText = ""

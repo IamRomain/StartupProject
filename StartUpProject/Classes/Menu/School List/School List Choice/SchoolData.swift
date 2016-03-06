@@ -17,7 +17,6 @@ class SchoolData {
     var numberOfMembers = ""
     var image:UIImage?=nil
     
-    //Set the Data
     init(name:String, type:String, location:String, numberOfMembers:String, image:String) {
         self.name = name
         self.type = type

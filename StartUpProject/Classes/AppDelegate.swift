@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Initialize the news data infos
     internal var newsInfos = [News]()
     internal var schoolInfos = [SchoolData]()
+    internal var profileInfos = [ProfileData]()
+    
     //Initialize the loadData object assigned to the LoadData class
     internal var loadData = LoadData()
     
@@ -25,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
             // Override point for customization after application launch.
-            
+                        
             //This allows to launch the function in LoadData Class, that will get all the data
             loadData.loadEverything()
             

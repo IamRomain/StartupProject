@@ -12,29 +12,20 @@ import FBSDKCoreKit
 
 class ProfileViewController: UITableViewController {
 
-    //Link the Labels with the Storyboard
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var idLabel: UILabel!
-    @IBOutlet weak var genderLabel: UILabel!
-    @IBOutlet weak var ageLabel: UILabel!
-    
-    @IBOutlet weak var profilePicture: UIImageView!
-    
-    //Initialize the Labels
-    var facebookid : String!
-    var username : String!
-    var userEmail : String!
-    var gender : String!
-    var birthday : String!
-    
+    //Set the schoolInfos var to SchoolData class
+    var profileInfos = [ProfileData]()
+    var profileTV = ProfileTV()
+    let loadData = (UIApplication.sharedApplication().delegate as! AppDelegate).loadData as LoadData
+
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //This allows us to get the schoolInfos Data that is in LoadData class!
+        self.profileInfos = loadData.profileInfos
         
-        returnUserData()
-
+        dispProfileInfos()
+        
         //Check if the Sidebar is active
         if revealViewController() != nil {
             menuButton.target = revealViewController()
@@ -49,64 +40,7 @@ class ProfileViewController: UITableViewController {
         }
     }
 
-    //Return the Data
-    func returnUserData() {
-            
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath:  "me", parameters: ["fields":"email, name, gender, birthday"])
-        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            
-        if ((error) != nil) {
-        // Process error
-        print("Error: \(error)")
-        } else {
-            self.facebookid = (result.valueForKey("id") as? String)!
-            self.username = (result.valueForKey("name") as? String)!
-            self.userEmail = (result.valueForKey("email") as? String)!
-            self.gender = (result.valueForKey("gender") as? String)!
-            self.birthday = (result.valueForKey("birthday") as? String)!
-        
-            self.nameLabel.text = self.username
-            //self.emailLabel.text = self.userEmail
-            //self.idLabel.text = self.facebookid
-            self.genderLabel.text = self.gender
-            self.ageLabel.text = self.birthday
-        
-            self.load_image("https://graph.facebook.com/\(self.facebookid)/picture?type=large", imageLabel: self.profilePicture)
-            }
-        })
-    }
-    
-    //Function that will load the Profile Image
-    func load_image(urlString:String, imageLabel: UIImageView) {
-        profilePictureFrame()
-        
-        let imgURL: NSURL = NSURL(string: urlString)!
-        let request: NSURLRequest = NSURLRequest(URL: imgURL)
-    
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithRequest(request) {
-            (data, response, error) -> Void in
-            
-            if (error == nil && data != nil) {
-                func display_image() {
-                    imageLabel.image = UIImage(data: data!)
-                }
-                dispatch_async(dispatch_get_main_queue(), display_image)
-            }
-        }
-        task.resume()
-    }
-    
-    //Set the profile picture frame
-    func profilePictureFrame() {
-        self.profilePicture.layer.borderWidth = 1
-        self.profilePicture.layer.masksToBounds = false
-        self.profilePicture.layer.borderColor = UIColor.blackColor().CGColor
-        self.profilePicture.layer.cornerRadius = self.profilePicture.frame.height/2
-        self.profilePicture.clipsToBounds = true
-    }
 
-    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -117,6 +51,18 @@ class ProfileViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
+    }
+    
+    
+    func dispProfileInfos() {
+        print(profileInfos)
+        /*
+        profileTV.nameLabel.text = profileInfos.
+        profileTV.emailLabel.text =
+        profileTV.idLabel.text = self.profileInfos.facebookid
+        profileTV.genderLabel.text =
+        profileTV.ageLabel.text =
+*/
     }
     
 }

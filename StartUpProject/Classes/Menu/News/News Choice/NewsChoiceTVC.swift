@@ -13,11 +13,14 @@ import FBSDKCoreKit
 class NewsChoiceTVC: UITableViewController {
 
     var newsInfos = [News]()
+    var loadData = LoadData()
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadData.getProfileData()
         
         //Retrieve the Data from AppDelegate
         self.newsInfos = (UIApplication.sharedApplication().delegate as! AppDelegate).newsInfos

@@ -593,18 +593,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="GOR-jJ-1Mi">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="GOR-jJ-1Mi" customClass="ProfileTV" customModule="StartUpProject" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="64" width="600" height="242"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="masks" translatesAutoresizingMaskIntoConstraints="NO" id="kD2-NK-2f9" customClass="AnimatableImageView" customModule="IBAnimatable">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="masks" translatesAutoresizingMaskIntoConstraints="NO" id="kD2-NK-2f9">
                                     <rect key="frame" x="231" y="15" width="139" height="140"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="139" id="07R-Jb-YAB"/>
                                     </constraints>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="maskType" value="circle"/>
-                                    </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZD-kF-PKg">
                                     <rect key="frame" x="188" y="163" width="224" height="21"/>
@@ -660,9 +657,15 @@
                                 <constraint firstItem="96v-ie-mBC" firstAttribute="trailing" secondItem="LZD-kF-PKg" secondAttribute="trailing" id="by8-Yq-2pR"/>
                                 <constraint firstItem="0ZC-q1-YK4" firstAttribute="firstBaseline" secondItem="o8l-Lu-YBj" secondAttribute="firstBaseline" id="ztq-s1-vpG"/>
                             </constraints>
+                            <connections>
+                                <outlet property="ageLabel" destination="o8l-Lu-YBj" id="fRh-hH-bfy"/>
+                                <outlet property="genderLabel" destination="0ZC-q1-YK4" id="q8v-1C-Z3Z"/>
+                                <outlet property="nameLabel" destination="LZD-kF-PKg" id="j1R-fH-Pjd"/>
+                                <outlet property="profilePicture" destination="kD2-NK-2f9" id="CbI-ZR-L97"/>
+                            </connections>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="b21-vZ-8rD">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="b21-vZ-8rD" customClass="ProfileTVCell" customModule="StartUpProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="334" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b21-vZ-8rD" id="dG1-mn-FO4">
@@ -687,11 +690,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ageLabel" destination="o8l-Lu-YBj" id="zzA-6a-q1I"/>
-                        <outlet property="genderLabel" destination="0ZC-q1-YK4" id="Q1O-Ig-WfA"/>
                         <outlet property="menuButton" destination="NpS-yY-yLc" id="3eE-Rs-PCT"/>
-                        <outlet property="nameLabel" destination="LZD-kF-PKg" id="VYl-d7-Rvc"/>
-                        <outlet property="profilePicture" destination="kD2-NK-2f9" id="E8p-Z8-uht"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JaK-pu-PsK" userLabel="First Responder" sceneMemberID="firstResponder"/>

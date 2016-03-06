@@ -12,7 +12,6 @@ class SchoolListChoiceTVC: UITableViewController {
     
     //Set the schoolInfos var to SchoolData class
     var schoolInfos = [SchoolData]()
-
     let loadData = (UIApplication.sharedApplication().delegate as! AppDelegate).loadData as LoadData
 
 
