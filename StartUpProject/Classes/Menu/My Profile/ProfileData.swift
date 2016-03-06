@@ -27,5 +27,4 @@ class ProfileData {
         self.gender = gender
         self.birthday = birthday
     }
-
 }

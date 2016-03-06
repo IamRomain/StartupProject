@@ -13,7 +13,7 @@ import FBSDKCoreKit
 class NewsChoiceTVC: UITableViewController {
 
     var newsInfos = [News]()
-    var loadData = LoadData()
+    let loadData = (UIApplication.sharedApplication().delegate as! AppDelegate).loadData as LoadData
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -101,18 +101,4 @@ class NewsChoiceTVC: UITableViewController {
         
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

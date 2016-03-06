@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ProfileTV: UIView {
+class ProfileTV: UIViewController {
+    
+    var profileInfos = [ProfileData]()
+    let loadData = (UIApplication.sharedApplication().delegate as! AppDelegate).loadData as LoadData
     
     //Initialize the outlets from the Storyboard
     @IBOutlet weak var nameLabel: UILabel!
@@ -18,6 +21,17 @@ class ProfileTV: UIView {
     @IBOutlet weak var ageLabel: UILabel!
 
     @IBOutlet weak var profilePicture: UIImageView!
+    
+    func dispData() {
+        //This allows us to get the schoolInfos Data that is in LoadData class!
+        self.profileInfos = loadData.profileInfos
+        
+        nameLabel.text = self.profileInfos[0].username
+        emailLabel.text = self.profileInfos[0].userEmail
+        idLabel.text = self.profileInfos[0].facebookid
+        genderLabel.text = self.profileInfos[0].gender
+        ageLabel.text = self.profileInfos[0].birthday
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

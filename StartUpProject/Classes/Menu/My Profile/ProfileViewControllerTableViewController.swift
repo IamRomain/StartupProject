@@ -13,17 +13,15 @@ import FBSDKCoreKit
 class ProfileViewController: UITableViewController {
 
     //Set the schoolInfos var to SchoolData class
-    var profileInfos = [ProfileData]()
-    var profileTV = ProfileTV()
-    let loadData = (UIApplication.sharedApplication().delegate as! AppDelegate).loadData as LoadData
+    let profileTV = (UIApplication.sharedApplication().delegate as! AppDelegate).profileTV as ProfileTV
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //This allows us to get the schoolInfos Data that is in LoadData class!
-        
-        dispProfileInfos()
+        profileTV.dispData()
+
         
         //Check if the Sidebar is active
         if revealViewController() != nil {
@@ -52,13 +50,5 @@ class ProfileViewController: UITableViewController {
         return 0
     }
     
-    
-    func dispProfileInfos() {
-        self.profileInfos = loadData.profileInfos
 
-
-        
-
-    }
-    
 }

@@ -16,7 +16,6 @@ public class LoadData: NSObject {
     
     var schoolInfos = [SchoolData]()
     var profileInfos = [ProfileData]()
-    var profileTV = ProfileTV()
     
     //Function to load all the Data
     func loadEverything() {
@@ -40,8 +39,6 @@ public class LoadData: NSObject {
 
     //This is the function to get the Profile Data
     func getProfileData() {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        if userDefaults.boolForKey("DisplayedWalkthrough") {
             let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath:  "me", parameters: ["fields":"email, name, gender, birthday"])
             graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
                 
@@ -52,22 +49,12 @@ public class LoadData: NSObject {
                     let profile = ProfileData(facebookid: (result.valueForKey("id") as! String), username: (result.valueForKey("name") as! String), userEmail: (result.valueForKey("email") as! String), gender: (result.valueForKey("gender") as! String), birthday: (result.valueForKey("birthday") as! String))
                     self.profileInfos.append(profile)
 
-                    print(self.profileInfos[0].gender)
-                    
-                    (self.profileTV.nameLabel.text)! = (self.profileInfos[0].username)
-                    self.profileTV.emailLabel.text! = self.profileInfos[0].userEmail
-                    self.profileTV.idLabel.text! = self.profileInfos[0].facebookid
-                    self.profileTV.genderLabel.text! = self.profileInfos[0].gender
-                    self.profileTV.ageLabel.text! = self.profileInfos[0].birthday
-
-                    
                     
                //     self.load_image("https://graph.facebook.com/\((result.valueForKey("id") as! String))/picture?type=large", imageLabel: self.profileTV.profilePicture)
-                    
-                    
+        
                 }
             })
-        }
+        
     }
     
 
