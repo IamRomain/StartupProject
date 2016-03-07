@@ -22,14 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //Initialize the loadData object assigned to the LoadData class
     internal var loadData = LoadData()
-    internal var profileTV = ProfileTV()
     
     var window: UIWindow?
         
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
             // Override point for customization after application launch.
-            FBSDKAppEvents.activateApp()
-
     
             //This allows to launch the function in LoadData Class, that will get all the data
             loadData.loadEverything()

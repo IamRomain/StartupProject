@@ -12,15 +12,33 @@ import FBSDKCoreKit
 
 class ProfileViewController: UITableViewController {
 
+    //Initialize the outlets from the Storyboard
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    
+    @IBOutlet weak var profilePicture: UIImageView!
+    
     //Set the schoolInfos var to SchoolData class
-    let profileTV = (UIApplication.sharedApplication().delegate as! AppDelegate).profileTV as ProfileTV
+    var profileInfos = [ProfileData]()
+    let loadData = (UIApplication.sharedApplication().delegate as! AppDelegate).loadData as LoadData
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //This allows us to get the schoolInfos Data that is in LoadData class!
-        profileTV.dispData()
+        self.profileInfos = loadData.profileInfos
+        
+        self.load_image((self.profileInfos[0].imageURL), imageLabel: profilePicture)
+        
+        nameLabel.text = self.profileInfos[0].username
+   //     emailLabel.text = self.profileInfos[0].userEmail
+   //     idLabel.text = self.profileInfos[0].facebookid
+        genderLabel.text = self.profileInfos[0].gender
+        ageLabel.text = self.profileInfos[0].birthday
 
         
         //Check if the Sidebar is active
@@ -37,7 +55,31 @@ class ProfileViewController: UITableViewController {
         }
     }
 
+    //Function that will load the Profile Image
+    func load_image(urlString:String, imageLabel: UIImageView) {
+        //Set the image frame
+        imageLabel.layer.borderWidth = 1
+        imageLabel.layer.masksToBounds = false
+        imageLabel.layer.borderColor = UIColor.blackColor().CGColor
+        imageLabel.layer.cornerRadius = imageLabel.frame.height/2
+        imageLabel.clipsToBounds = true
+        
+        let imgURL: NSURL = NSURL(string: urlString)!
+        let request: NSURLRequest = NSURLRequest(URL: imgURL)
+        
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            if (error == nil && data != nil) {
+                func display_image() {
+                    imageLabel.image = UIImage(data: data!)
+                }
+                dispatch_async(dispatch_get_main_queue(), display_image)
+            }
+        }
+        task.resume()
+    }
 
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -49,6 +91,5 @@ class ProfileViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
-    
-
+  
 }

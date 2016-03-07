@@ -46,35 +46,41 @@ public class LoadData: NSObject {
                     // Process error
                     print("Error: \(error)")
                 } else {
-                    let profile = ProfileData(facebookid: (result.valueForKey("id") as! String), username: (result.valueForKey("name") as! String), userEmail: (result.valueForKey("email") as! String), gender: (result.valueForKey("gender") as! String), birthday: (result.valueForKey("birthday") as! String))
+                    let profile = ProfileData(facebookid: (result.valueForKey("id") as! String), username: (result.valueForKey("name") as! String), userEmail: (result.valueForKey("email") as! String), gender: (result.valueForKey("gender") as! String), birthday: (result.valueForKey("birthday") as! String), imageURL: "https://graph.facebook.com/\((result.valueForKey("id") as! String))/picture?type=large")
                     self.profileInfos.append(profile)
-
                     
-               //     self.load_image("https://graph.facebook.com/\((result.valueForKey("id") as! String))/picture?type=large", imageLabel: self.profileTV.profilePicture)
+  //                  self.load_image(profile.imageURL, imageLabel: (ProfileViewController().profilePicture)!)
+
         
                 }
             })
+    }
+    
+    
+    
+    //Function that will load the Profile Image
+    func load_image(urlString:String, imageLabel: UIImageView) {
+        //Set the image frame
+        imageLabel.layer.borderWidth = 1
+        imageLabel.layer.masksToBounds = false
+        imageLabel.layer.borderColor = UIColor.blackColor().CGColor
+        imageLabel.layer.cornerRadius = imageLabel.frame.height/2
+        imageLabel.clipsToBounds = true
         
-    }
-    
-
-
-//Function that will load the Profile Image
-func load_image(urlString:String, imageLabel: UIImageView) {
-    let imgURL: NSURL = NSURL(string: urlString)!
-    let request: NSURLRequest = NSURLRequest(URL: imgURL)
-    
-    let session = NSURLSession.sharedSession()
-    let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
-        if (error == nil && data != nil) {
-            func display_image() {
-                imageLabel.image = UIImage(data: data!)
+        let imgURL: NSURL = NSURL(string: urlString)!
+        let request: NSURLRequest = NSURLRequest(URL: imgURL)
+        
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            if (error == nil && data != nil) {
+                func display_image() {
+                    imageLabel.image = UIImage(data: data!)
+                }
+                dispatch_async(dispatch_get_main_queue(), display_image)
             }
-            dispatch_async(dispatch_get_main_queue(), display_image)
         }
+        task.resume()
     }
-    task.resume()
-    }
-    
 }
+
 

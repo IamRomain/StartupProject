@@ -593,7 +593,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="GOR-jJ-1Mi" customClass="ProfileTV" customModule="StartUpProject" customModuleProvider="target">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="GOR-jJ-1Mi">
                             <rect key="frame" x="0.0" y="64" width="600" height="242"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -657,12 +657,6 @@
                                 <constraint firstItem="96v-ie-mBC" firstAttribute="trailing" secondItem="LZD-kF-PKg" secondAttribute="trailing" id="by8-Yq-2pR"/>
                                 <constraint firstItem="0ZC-q1-YK4" firstAttribute="firstBaseline" secondItem="o8l-Lu-YBj" secondAttribute="firstBaseline" id="ztq-s1-vpG"/>
                             </constraints>
-                            <connections>
-                                <outlet property="ageLabel" destination="o8l-Lu-YBj" id="fRh-hH-bfy"/>
-                                <outlet property="genderLabel" destination="0ZC-q1-YK4" id="q8v-1C-Z3Z"/>
-                                <outlet property="nameLabel" destination="LZD-kF-PKg" id="j1R-fH-Pjd"/>
-                                <outlet property="profilePicture" destination="kD2-NK-2f9" id="CbI-ZR-L97"/>
-                            </connections>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="b21-vZ-8rD" customClass="ProfileTVCell" customModule="StartUpProject" customModuleProvider="target">
@@ -690,7 +684,11 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="ageLabel" destination="o8l-Lu-YBj" id="8fZ-R7-qTp"/>
+                        <outlet property="genderLabel" destination="0ZC-q1-YK4" id="FQR-e4-jur"/>
                         <outlet property="menuButton" destination="NpS-yY-yLc" id="3eE-Rs-PCT"/>
+                        <outlet property="nameLabel" destination="LZD-kF-PKg" id="UfC-9n-xln"/>
+                        <outlet property="profilePicture" destination="kD2-NK-2f9" id="YV4-Z0-qaH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JaK-pu-PsK" userLabel="First Responder" sceneMemberID="firstResponder"/>

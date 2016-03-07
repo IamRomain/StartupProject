@@ -17,14 +17,15 @@ class ProfileData {
     var gender = ""
     var birthday = ""
 
-    var image:UIImage?=nil
+    var imageURL = ""
     
     //Set the Data
-    init(facebookid:String, username:String, userEmail:String, gender:String, birthday:String) {
+    init(facebookid:String, username:String, userEmail:String, gender:String, birthday:String, imageURL: String) {
         self.facebookid = facebookid
         self.username = username
         self.userEmail = userEmail
         self.gender = gender
         self.birthday = birthday
+        self.imageURL = imageURL
     }
 }
