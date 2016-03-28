@@ -62,14 +62,14 @@ extension WalkthroughPageViewController : UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController?
     {
         var index = (viewController as! WalkthroughViewController).index
-        index++
+        index += 1
         return self.viewControllerAtIndex(index)
     }
     
     //Set the Page Index for a Swipe on previous page
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         var index = (viewController as! WalkthroughViewController).index
-        index--
+        index -= 1
         return self.viewControllerAtIndex(index)
     }
 }
