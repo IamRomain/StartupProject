@@ -659,7 +659,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="b21-vZ-8rD" customClass="ProfileTVCell" customModule="StartUpProject" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileTVCell" id="b21-vZ-8rD" customClass="ProfileTVCell" customModule="StartUpProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="334" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b21-vZ-8rD" id="dG1-mn-FO4">
