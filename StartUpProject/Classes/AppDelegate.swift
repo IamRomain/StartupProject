@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Initialize the loadData object assigned to the LoadData class
     internal var loadData = LoadData()
     
+    var profileImage:UIImage!
+    
     var window: UIWindow?
         
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

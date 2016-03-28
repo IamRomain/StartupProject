@@ -20,6 +20,7 @@ class ProfileViewController: UITableViewController {
     @IBOutlet weak var ageLabel: UILabel!
     
     @IBOutlet weak var profilePicture: UIImageView!
+    var isImageLoaded=false
     
     //Set the schoolInfos var to SchoolData class
     var profileInfos = [ProfileData]()
@@ -32,7 +33,16 @@ class ProfileViewController: UITableViewController {
         //This allows us to get the schoolInfos Data that is in LoadData class!
         self.profileInfos = loadData.profileInfos
         
-        self.load_image((self.profileInfos[0].imageURL), imageLabel: profilePicture)
+        //Set the image frame
+        profilePicture.layer.borderWidth = 1
+        profilePicture.layer.masksToBounds = false
+        profilePicture.layer.borderColor = UIColor.blackColor().CGColor
+        profilePicture.layer.cornerRadius = profilePicture.frame.height/2
+        profilePicture.clipsToBounds = true
+
+        profilePicture.image = (UIApplication.sharedApplication().delegate as! AppDelegate).profileImage
+
+        //self.load_image((self.profileInfos[0].imageURL), imageLabel: profilePicture)
         
         nameLabel.text = self.profileInfos[0].username
    //     emailLabel.text = self.profileInfos[0].userEmail
@@ -73,6 +83,7 @@ class ProfileViewController: UITableViewController {
                 func display_image() {
                     imageLabel.image = UIImage(data: data!)
                 }
+                self.isImageLoaded = true
                 dispatch_async(dispatch_get_main_queue(), display_image)
             }
         }
