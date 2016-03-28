@@ -24,7 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     internal var loadData = LoadData()
     
     var profileImage:UIImage!
-        
+    
+    var salut : String!
+    
     var window: UIWindow?
         
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
