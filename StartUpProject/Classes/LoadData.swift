@@ -44,7 +44,7 @@ public class LoadData: NSObject {
                 
                 if ((error) != nil) {
                     // Process error
-                    print("Error: \(error)")
+                    print("Error: \(error)", terminator: "")
                 } else {
                     let profile = ProfileData(facebookid: (result.valueForKey("id") as! String), username: (result.valueForKey("name") as! String), userEmail: (result.valueForKey("email") as! String), gender: (result.valueForKey("gender") as! String), birthday: (result.valueForKey("birthday") as! String), imageURL: "https://graph.facebook.com/\((result.valueForKey("id") as! String))/picture?type=large")
                     self.profileInfos.append(profile)

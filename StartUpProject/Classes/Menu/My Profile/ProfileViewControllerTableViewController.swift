@@ -54,7 +54,7 @@ class ProfileViewController: UITableViewController {
         //Check if the Sidebar is active
         if revealViewController() != nil {
             menuButton.target = revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             
             //Enable the Gestures and prevent from selecting a cell
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
