@@ -16,19 +16,21 @@
 		2613EBB41C854788000228A4 /* StartUpProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613EBB31C854788000228A4 /* StartUpProjectUITests.swift */; };
 		2613EC361C85F3B3000228A4 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613EC351C85F3B3000228A4 /* WalkthroughPageViewController.swift */; };
 		2613EC391C85FB6B000228A4 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613EC381C85FB6B000228A4 /* WalkthroughViewController.swift */; };
-		2613EC3F1C85FBCB000228A4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC31C85483B000228A4 /* FBSDKCoreKit.framework */; };
-		2613EC401C85FBCB000228A4 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC31C85483B000228A4 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2613EC411C85FBCB000228A4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC41C85483B000228A4 /* FBSDKLoginKit.framework */; };
-		2613EC421C85FBCB000228A4 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC41C85483B000228A4 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2613EC4D1C860637000228A4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2613EC4C1C860637000228A4 /* SWRevealViewController.m */; };
 		2613EC501C860CB0000228A4 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613EC4F1C860CB0000228A4 /* MenuController.swift */; };
 		2613EC531C860FDA000228A4 /* NewsChoiceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613EC521C860FDA000228A4 /* NewsChoiceTVC.swift */; };
 		2613EC581C8614EA000228A4 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613EC571C8614EA000228A4 /* News.swift */; };
-		372575E81CA9F098001B5013 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1A2EC1CA9E4B200A948A1 /* Alamofire.framework */; };
-		372575E91CA9F098001B5013 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1A3041CA9E4CA00A948A1 /* SwiftyJSON.framework */; };
+		375CF2101CAAFF8700788014 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1A3041CA9E4CA00A948A1 /* SwiftyJSON.framework */; };
+		375CF2111CAAFF8700788014 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1A3041CA9E4CA00A948A1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		375CF2141CAAFF8700788014 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1A2EC1CA9E4B200A948A1 /* Alamofire.framework */; };
+		375CF2151CAAFF8700788014 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1A2EC1CA9E4B200A948A1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		375CF22D1CAB08BF00788014 /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3822BC1C8A714A005BBFF1 /* IBAnimatable.framework */; };
+		375CF22E1CAB08BF00788014 /* IBAnimatable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3822BC1C8A714A005BBFF1 /* IBAnimatable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		375CF2311CAB08BF00788014 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC31C85483B000228A4 /* FBSDKCoreKit.framework */; };
+		375CF2321CAB08BF00788014 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC31C85483B000228A4 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		375CF2331CAB08BF00788014 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC41C85483B000228A4 /* FBSDKLoginKit.framework */; };
+		375CF2341CAB08BF00788014 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC41C85483B000228A4 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A38221C1C8A6CBF005BBFF1 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A38221B1C8A6CBF005BBFF1 /* LoadData.swift */; };
-		7A3822D91C8A715B005BBFF1 /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3822BC1C8A714A005BBFF1 /* IBAnimatable.framework */; };
-		7A3822DA1C8A715B005BBFF1 /* IBAnimatable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3822BC1C8A714A005BBFF1 /* IBAnimatable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A3822E61C8A80BD005BBFF1 /* SchoolListChoiceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3822E51C8A80BD005BBFF1 /* SchoolListChoiceTVC.swift */; };
 		7A3822E81C8A813D005BBFF1 /* SchoolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3822E71C8A813D005BBFF1 /* SchoolData.swift */; };
 		7A3EA13A1C865E23003EFA11 /* ProfileViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3EA1391C865E23003EFA11 /* ProfileViewControllerTableViewController.swift */; };
@@ -53,6 +55,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2613EB8F1C854788000228A4;
 			remoteInfo = StartUpProject;
+		};
+		375CF2121CAAFF8700788014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37F1A2F91CA9E4CA00A948A1 /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		375CF2161CAAFF8700788014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37F1A2E11CA9E4B200A948A1 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		375CF22F1CAB08BF00788014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A3822B41C8A714A005BBFF1 /* IBAnimatableApp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AE6B01541C2A082300950BB2;
+			remoteInfo = IBAnimatable;
 		};
 		37F1A2EB1CA9E4B200A948A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -166,25 +189,20 @@
 			remoteGlobalIDString = AE6B01551C2A082300950BB2;
 			remoteInfo = IBAnimatable;
 		};
-		7A3822DB1C8A715B005BBFF1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A3822B41C8A714A005BBFF1 /* IBAnimatableApp.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AE6B01541C2A082300950BB2;
-			remoteInfo = IBAnimatable;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2613EC431C85FBCB000228A4 /* Embed Frameworks */ = {
+		3757455B1CAA572C00B89EE4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2613EC421C85FBCB000228A4 /* FBSDKLoginKit.framework in Embed Frameworks */,
-				2613EC401C85FBCB000228A4 /* FBSDKCoreKit.framework in Embed Frameworks */,
-				7A3822DA1C8A715B005BBFF1 /* IBAnimatable.framework in Embed Frameworks */,
+				375CF2111CAAFF8700788014 /* SwiftyJSON.framework in Embed Frameworks */,
+				375CF2321CAB08BF00788014 /* FBSDKCoreKit.framework in Embed Frameworks */,
+				375CF2341CAB08BF00788014 /* FBSDKLoginKit.framework in Embed Frameworks */,
+				375CF2151CAAFF8700788014 /* Alamofire.framework in Embed Frameworks */,
+				375CF22E1CAB08BF00788014 /* IBAnimatable.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,11 +252,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				372575E81CA9F098001B5013 /* Alamofire.framework in Frameworks */,
-				372575E91CA9F098001B5013 /* SwiftyJSON.framework in Frameworks */,
-				2613EC411C85FBCB000228A4 /* FBSDKLoginKit.framework in Frameworks */,
-				2613EC3F1C85FBCB000228A4 /* FBSDKCoreKit.framework in Frameworks */,
-				7A3822D91C8A715B005BBFF1 /* IBAnimatable.framework in Frameworks */,
+				375CF2101CAAFF8700788014 /* SwiftyJSON.framework in Frameworks */,
+				375CF2311CAB08BF00788014 /* FBSDKCoreKit.framework in Frameworks */,
+				375CF2331CAB08BF00788014 /* FBSDKLoginKit.framework in Frameworks */,
+				375CF2141CAAFF8700788014 /* Alamofire.framework in Frameworks */,
+				375CF22D1CAB08BF00788014 /* IBAnimatable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,13 +488,15 @@
 			buildPhases = (
 				2613EB8C1C854788000228A4 /* Sources */,
 				2613EB8D1C854788000228A4 /* Frameworks */,
-				2613EC431C85FBCB000228A4 /* Embed Frameworks */,
 				2613EB8E1C854788000228A4 /* Resources */,
+				3757455B1CAA572C00B89EE4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7A3822DC1C8A715B005BBFF1 /* PBXTargetDependency */,
+				375CF2131CAAFF8700788014 /* PBXTargetDependency */,
+				375CF2171CAAFF8700788014 /* PBXTargetDependency */,
+				375CF2301CAB08BF00788014 /* PBXTargetDependency */,
 			);
 			name = StartUpProject;
 			productName = StartUpProject;
@@ -532,7 +552,6 @@
 				TargetAttributes = {
 					2613EB8F1C854788000228A4 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 888R2RY2P9;
 					};
 					2613EBA31C854788000228A4 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -774,10 +793,20 @@
 			target = 2613EB8F1C854788000228A4 /* StartUpProject */;
 			targetProxy = 2613EBB01C854788000228A4 /* PBXContainerItemProxy */;
 		};
-		7A3822DC1C8A715B005BBFF1 /* PBXTargetDependency */ = {
+		375CF2131CAAFF8700788014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON iOS";
+			targetProxy = 375CF2121CAAFF8700788014 /* PBXContainerItemProxy */;
+		};
+		375CF2171CAAFF8700788014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 375CF2161CAAFF8700788014 /* PBXContainerItemProxy */;
+		};
+		375CF2301CAB08BF00788014 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IBAnimatable;
-			targetProxy = 7A3822DB1C8A715B005BBFF1 /* PBXContainerItemProxy */;
+			targetProxy = 375CF22F1CAB08BF00788014 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -838,9 +867,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -878,8 +908,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -900,8 +931,9 @@
 					"$(PROJECT_DIR)/StartUpProject/Frameworks/FB",
 				);
 				INFOPLIST_FILE = StartUpProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RomainSoubrane.StartUpProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pso.StartUpProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos9.3;
@@ -924,8 +956,9 @@
 					"$(PROJECT_DIR)/StartUpProject/Frameworks/FB",
 				);
 				INFOPLIST_FILE = StartUpProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RomainSoubrane.StartUpProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pso.StartUpProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos9.3;
