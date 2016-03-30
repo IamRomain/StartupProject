@@ -865,7 +865,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pso.JakeLin.IBAnimatableApp;
 				PRODUCT_NAME = IBAnimatableApp;
-				PROVISIONING_PROFILE = "44116e2e-0444-4ce3-847f-aaf15a7aba9d";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -881,7 +881,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pso.JakeLin.IBAnimatableApp;
 				PRODUCT_NAME = IBAnimatableApp;
-				PROVISIONING_PROFILE = "44116e2e-0444-4ce3-847f-aaf15a7aba9d";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
