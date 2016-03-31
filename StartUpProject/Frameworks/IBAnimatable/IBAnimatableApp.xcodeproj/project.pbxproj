@@ -11,6 +11,8 @@
 		33A8B9ED1C7E790800082529 /* SystemCubeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B9EB1C7E790800082529 /* SystemCubeAnimator.swift */; };
 		33A8B9EF1C7E7A4C00082529 /* TransitionFromDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B9EE1C7E7A4C00082529 /* TransitionFromDirection.swift */; };
 		33A8B9F01C7E7A4C00082529 /* TransitionFromDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B9EE1C7E7A4C00082529 /* TransitionFromDirection.swift */; };
+		37262C5A1CACA5FC00E3CF76 /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6B01551C2A082300950BB2 /* IBAnimatable.framework */; };
+		37262C5B1CACA5FC00E3CF76 /* IBAnimatable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE6B01551C2A082300950BB2 /* IBAnimatable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE0B0FEA1C25372200E36B78 /* TableViewCellDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0B0FE91C25372200E36B78 /* TableViewCellDesignable.swift */; };
 		AE0B0FEC1C26397700E36B78 /* AnimatableCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0B0FEB1C26397700E36B78 /* AnimatableCheckBox.swift */; };
 		AE0B0FEE1C263A1900E36B78 /* CheckBoxDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0B0FED1C263A1900E36B78 /* CheckBoxDesignable.swift */; };
@@ -140,6 +142,30 @@
 		E2E28E6F1C6A6D22003F3852 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E28E6D1C6A6D22003F3852 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		37262C5C1CACA5FC00E3CF76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE6C66F71BFBF93500134A35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE6B01541C2A082300950BB2;
+			remoteInfo = IBAnimatable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37262C5E1CACA5FC00E3CF76 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37262C5B1CACA5FC00E3CF76 /* IBAnimatable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		33A8B9EB1C7E790800082529 /* SystemCubeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemCubeAnimator.swift; sourceTree = "<group>"; };
 		33A8B9EE1C7E7A4C00082529 /* TransitionFromDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionFromDirection.swift; sourceTree = "<group>"; };
@@ -229,6 +255,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37262C5A1CACA5FC00E3CF76 /* IBAnimatable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,10 +502,12 @@
 				AE6C66FB1BFBF93500134A35 /* Sources */,
 				AE6C66FC1BFBF93500134A35 /* Frameworks */,
 				AE6C66FD1BFBF93500134A35 /* Resources */,
+				37262C5E1CACA5FC00E3CF76 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				37262C5D1CACA5FC00E3CF76 /* PBXTargetDependency */,
 			);
 			name = IBAnimatableApp;
 			productName = IBAnimatableApp;
@@ -498,7 +527,6 @@
 				TargetAttributes = {
 					AE6B01541C2A082300950BB2 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 888R2RY2P9;
 					};
 					AE6C66FE1BFBF93500134A35 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -689,6 +717,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		37262C5D1CACA5FC00E3CF76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE6B01541C2A082300950BB2 /* IBAnimatable */;
+			targetProxy = 37262C5C1CACA5FC00E3CF76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		AE154B0E1C788A560093C05B /* Transitions.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -730,6 +766,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/IBAnimatableApp/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -754,6 +791,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/IBAnimatableApp/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -861,11 +899,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = IBAnimatableApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pso.JakeLin.IBAnimatableApp;
 				PRODUCT_NAME = IBAnimatableApp;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f18b13f9-5777-4403-ad50-60ecbf5b3aeb";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -877,11 +916,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = IBAnimatableApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pso.JakeLin.IBAnimatableApp;
 				PRODUCT_NAME = IBAnimatableApp;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f18b13f9-5777-4403-ad50-60ecbf5b3aeb";
 			};
 			name = Release;
 		};

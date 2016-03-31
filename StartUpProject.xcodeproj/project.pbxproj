@@ -20,16 +20,14 @@
 		2613EC501C860CB0000228A4 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613EC4F1C860CB0000228A4 /* MenuController.swift */; };
 		2613EC531C860FDA000228A4 /* NewsChoiceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613EC521C860FDA000228A4 /* NewsChoiceTVC.swift */; };
 		2613EC581C8614EA000228A4 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613EC571C8614EA000228A4 /* News.swift */; };
+		37262C5F1CACA73500E3CF76 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC31C85483B000228A4 /* FBSDKCoreKit.framework */; };
+		37262C601CACA74F00E3CF76 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC41C85483B000228A4 /* FBSDKLoginKit.framework */; };
 		375CF2101CAAFF8700788014 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1A3041CA9E4CA00A948A1 /* SwiftyJSON.framework */; };
 		375CF2111CAAFF8700788014 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1A3041CA9E4CA00A948A1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		375CF2141CAAFF8700788014 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1A2EC1CA9E4B200A948A1 /* Alamofire.framework */; };
 		375CF2151CAAFF8700788014 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1A2EC1CA9E4B200A948A1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		375CF22D1CAB08BF00788014 /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3822BC1C8A714A005BBFF1 /* IBAnimatable.framework */; };
 		375CF22E1CAB08BF00788014 /* IBAnimatable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3822BC1C8A714A005BBFF1 /* IBAnimatable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		375CF2311CAB08BF00788014 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC31C85483B000228A4 /* FBSDKCoreKit.framework */; };
-		375CF2321CAB08BF00788014 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC31C85483B000228A4 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		375CF2331CAB08BF00788014 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC41C85483B000228A4 /* FBSDKLoginKit.framework */; };
-		375CF2341CAB08BF00788014 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2613EBC41C85483B000228A4 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A38221C1C8A6CBF005BBFF1 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A38221B1C8A6CBF005BBFF1 /* LoadData.swift */; };
 		7A3822E61C8A80BD005BBFF1 /* SchoolListChoiceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3822E51C8A80BD005BBFF1 /* SchoolListChoiceTVC.swift */; };
 		7A3822E81C8A813D005BBFF1 /* SchoolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3822E71C8A813D005BBFF1 /* SchoolData.swift */; };
@@ -199,8 +197,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				375CF2111CAAFF8700788014 /* SwiftyJSON.framework in Embed Frameworks */,
-				375CF2321CAB08BF00788014 /* FBSDKCoreKit.framework in Embed Frameworks */,
-				375CF2341CAB08BF00788014 /* FBSDKLoginKit.framework in Embed Frameworks */,
 				375CF2151CAAFF8700788014 /* Alamofire.framework in Embed Frameworks */,
 				375CF22E1CAB08BF00788014 /* IBAnimatable.framework in Embed Frameworks */,
 			);
@@ -253,8 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				375CF2101CAAFF8700788014 /* SwiftyJSON.framework in Frameworks */,
-				375CF2311CAB08BF00788014 /* FBSDKCoreKit.framework in Frameworks */,
-				375CF2331CAB08BF00788014 /* FBSDKLoginKit.framework in Frameworks */,
+				37262C5F1CACA73500E3CF76 /* FBSDKCoreKit.framework in Frameworks */,
+				37262C601CACA74F00E3CF76 /* FBSDKLoginKit.framework in Frameworks */,
 				375CF2141CAAFF8700788014 /* Alamofire.framework in Frameworks */,
 				375CF22D1CAB08BF00788014 /* IBAnimatable.framework in Frameworks */,
 			);
@@ -552,7 +548,6 @@
 				TargetAttributes = {
 					2613EB8F1C854788000228A4 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 888R2RY2P9;
 					};
 					2613EBA31C854788000228A4 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -936,7 +931,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pso.StartUpProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f18b13f9-5777-4403-ad50-60ecbf5b3aeb";
 				SDKROOT = iphoneos9.3;
 				SWIFT_OBJC_BRIDGING_HEADER = "StartUpProject/Classes/SWRevealViewController/StartUpProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -961,7 +956,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pso.StartUpProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f18b13f9-5777-4403-ad50-60ecbf5b3aeb";
 				SDKROOT = iphoneos9.3;
 				SWIFT_OBJC_BRIDGING_HEADER = "StartUpProject/Classes/SWRevealViewController/StartUpProject-Bridging-Header.h";
 			};
@@ -971,6 +966,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = StartUpProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RomainSoubrane.StartUpProjectTests;
@@ -983,6 +979,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = StartUpProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RomainSoubrane.StartUpProjectTests;
