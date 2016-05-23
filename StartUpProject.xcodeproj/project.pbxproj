@@ -548,6 +548,7 @@
 				TargetAttributes = {
 					2613EB8F1C854788000228A4 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 888R2RY2P9;
 					};
 					2613EBA31C854788000228A4 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -931,7 +932,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pso.StartUpProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f18b13f9-5777-4403-ad50-60ecbf5b3aeb";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos9.3;
 				SWIFT_OBJC_BRIDGING_HEADER = "StartUpProject/Classes/SWRevealViewController/StartUpProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -956,7 +957,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pso.StartUpProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f18b13f9-5777-4403-ad50-60ecbf5b3aeb";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos9.3;
 				SWIFT_OBJC_BRIDGING_HEADER = "StartUpProject/Classes/SWRevealViewController/StartUpProject-Bridging-Header.h";
 			};
